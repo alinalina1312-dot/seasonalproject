@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PredictSense — О проекте</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { theme: { extend: { fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] }, colors: { midnight: "#0B132B" } } } };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-50 text-slate-900 font-sans">
+    <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur"><div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4"><a href="index.html" class="text-xl font-extrabold text-emerald-700">PredictSense</a><nav class="hidden md:flex gap-2 items-center"><a data-nav-link href="index.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Главная</a><a data-nav-link href="about.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">О проекте</a><a data-nav-link href="datasets.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Данные</a><a data-nav-link href="analysis.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Анализ</a><a data-nav-link href="methodology.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Методология</a><a data-nav-link href="results.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Результаты</a><a data-nav-link href="business.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Бизнес-кейс</a><a data-nav-link href="faq.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">FAQ</a><a data-nav-link href="contact.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Контакты</a></nav><button data-menu-button class="rounded-lg border border-slate-200 bg-white p-2 md:hidden"><svg data-menu-open class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg><svg data-menu-close class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6l-12 12"/></svg></button></div><nav data-mobile-menu class="hidden border-t border-slate-200 bg-white px-4 py-3 md:hidden"><div class="grid gap-2"><a data-nav-link href="index.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Главная</a><a data-nav-link href="about.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">О проекте</a><a data-nav-link href="datasets.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Данные</a><a data-nav-link href="analysis.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Анализ</a><a data-nav-link href="methodology.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Методология</a><a data-nav-link href="results.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Результаты</a><a data-nav-link href="business.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Бизнес-кейс</a><a data-nav-link href="faq.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">FAQ</a><a data-nav-link href="contact.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Контакты</a></div></nav></header>
+    <main class="mx-auto max-w-7xl px-4 py-16">
+      <h1 class="text-4xl font-extrabold">О проекте</h1>
+      <p class="mt-4 max-w-4xl text-slate-600">Цель проекта — дать стабильный прогноз сезонного спроса по вашим историческим данным и прогнозному горизонту, чтобы решения по закупкам принимались заранее и с меньшим риском.</p>
+      <div class="mt-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-bold">Что даёт бизнесу (профит)</h2>
+        <ul class="mt-3 grid gap-2 text-slate-600 sm:grid-cols-2">
+          <li><span class="font-semibold text-emerald-700">Меньше дефицита:</span> товар чаще доступен на полке в пик.</li>
+          <li><span class="font-semibold text-emerald-700">Меньше излишков:</span> сокращаются остатки после сезона.</li>
+          <li><span class="font-semibold text-emerald-700">Экономия логистики:</span> меньше срочных довозов и перераспределений.</li>
+          <li><span class="font-semibold text-emerald-700">Планирование бюджета:</span> прогнозный коридор помогает управлять риском.</li>
+        </ul>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-lg font-semibold text-emerald-700">Цель</h2><p class="mt-2 text-sm text-slate-600">Предсказывать спрос по сезонам и заранее готовить закупки.</p></article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-lg font-semibold text-emerald-700">Ключевые входы</h2><p class="mt-2 text-sm text-slate-600">Дата и продажи (история) + прогноз и коридор неопределённости.</p></article>
+        <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><h2 class="text-lg font-semibold text-emerald-700">Выход</h2><p class="mt-2 text-sm text-slate-600">Прогноз на период + минимальный/максимальный порог (для риска).</p></article>
+      </div>
+      <section class="mt-10 rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
+        <h2 class="text-2xl font-bold">Что такое сезонность?</h2>
+        <ul class="mt-4 space-y-3 text-slate-600">
+          <li>Цикличность: регулярные колебания по неделям, месяцам и кварталам.</li>
+          <li>Праздники: новогодний период, распродажи, школьные сезоны.</li>
+          <li>Погода: изменение температуры напрямую влияет на категории товаров.</li>
+        </ul>
+      </section>
+    </main>
+    <footer class="border-t border-slate-200 bg-white"><div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-3"><div><p class="text-lg font-semibold text-emerald-700">PredictSense</p><p class="mt-2 text-sm text-slate-500">Модель прогнозирования спроса на сезонный товар.</p></div><div class="text-sm text-slate-600"><p>Работала над проектом: Тугаева Алина и Иксанов Айрат</p><p>Школа: Школа Цифровых Технологий</p><p>Курс: 1</p><p>Университет: Narxoz</p><p class="mt-2 text-slate-500">© 2026</p></div><div><p class="text-sm font-semibold text-slate-700">Соцсети</p><a href="https://github.com" target="_blank" class="mt-2 block text-sm hover:text-emerald-600">GitHub</a><a href="https://linkedin.com" target="_blank" class="block text-sm hover:text-emerald-600">LinkedIn</a></div></div><div class="border-t border-slate-200 px-4 py-4 text-center text-xs text-slate-500"><a href="index.html">Главная</a> · <a href="about.html">О проекте</a> · <a href="datasets.html">Данные</a> · <a href="analysis.html">Анализ</a> · <a href="methodology.html">Методология</a> · <a href="results.html">Результаты</a> · <a href="business.html">Бизнес-кейс</a> · <a href="faq.html">FAQ</a> · <a href="contact.html">Контакты</a></div></footer>
+    <button data-back-to-top class="fixed bottom-6 right-6 rounded-full bg-emerald-500 px-4 py-3 text-sm font-semibold text-slate-900 opacity-0 pointer-events-none shadow-sm">Вверх</button>
+    <script src="assets/data.js"></script>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
