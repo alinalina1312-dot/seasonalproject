@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f1f5f9"/>
+      <stop offset="0.5" stop-color="#fff7ed"/>
+      <stop offset="1" stop-color="#ecfeff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#g2)"/>
+  <circle cx="330" cy="250" r="210" fill="#0ea5e9" opacity="0.12"/>
+  <circle cx="900" cy="420" r="220" fill="#10b981" opacity="0.10"/>
+  <rect x="70" y="70" width="1060" height="535" rx="36" fill="#ffffff" opacity="0.7"/>
+  <text x="110" y="170" font-family="Inter, system-ui, sans-serif" font-size="56" fill="#0f172a" font-weight="800">AlinaAI</text>
+  <text x="110" y="230" font-family="Inter, system-ui, sans-serif" font-size="28" fill="#0f172a" opacity="0.75">AI020B0@ " 72C: 2:;NG05BAO :=>?:>9</text>
+  <g transform="translate(560 310)">
+    <circle cx="0" cy="0" r="70" fill="#0ea5e9" opacity="0.18"/>
+    <polygon points="-18,-30 44,0 -18,30" fill="#075985"/>
+  </g>
+</svg>

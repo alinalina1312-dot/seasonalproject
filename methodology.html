@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PredictSense — Методология</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:["Inter","sans-serif"]},colors:{midnight:"#0B132B"}}}};</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+      <a href="index.html" class="text-xl font-extrabold text-emerald-300">PredictSense</a>
+      <nav class="hidden items-center gap-2 md:flex">
+        <a data-nav-link href="index.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Главная</a>
+        <a data-nav-link href="about.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">О проекте</a>
+        <a data-nav-link href="datasets.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Данные</a>
+        <a data-nav-link href="analysis.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Анализ</a>
+        <a data-nav-link href="methodology.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Методология</a>
+        <a data-nav-link href="results.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Результаты</a>
+        <a data-nav-link href="business.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Бизнес-кейс</a>
+        <a data-nav-link href="faq.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">FAQ</a>
+        <a data-nav-link href="contact.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Контакты</a>
+      </nav>
+      <button data-menu-button type="button" class="rounded-lg border border-slate-200 bg-white p-2 md:hidden" aria-label="Меню">
+        <svg data-menu-open class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg data-menu-close class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M6 6l12 12M18 6l-12 12"/></svg>
+      </button>
+    </div>
+    <nav data-mobile-menu class="hidden border-t border-slate-200 bg-white px-4 py-3 md:hidden">
+      <div class="grid gap-2">
+        <a data-nav-link href="index.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Главная</a>
+        <a data-nav-link href="about.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">О проекте</a>
+        <a data-nav-link href="datasets.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Данные</a>
+        <a data-nav-link href="analysis.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Анализ</a>
+        <a data-nav-link href="methodology.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Методология</a>
+        <a data-nav-link href="results.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Результаты</a>
+        <a data-nav-link href="business.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Бизнес-кейс</a>
+        <a data-nav-link href="faq.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">FAQ</a>
+        <a data-nav-link href="contact.html" class="rounded-lg px-3 py-2 text-sm hover:bg-slate-100">Контакты</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-4 pb-12 pt-8">
+    <p class="text-[10px] font-semibold uppercase tracking-widest text-emerald-600/90">Методология</p>
+    <h1 class="mt-1 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">Как работает система прогнозирования</h1>
+    <p class="mt-3 text-sm leading-relaxed text-slate-600">
+      Система использует библиотеку <strong class="font-medium text-slate-800">Prophet</strong> для прогноза спроса по истории из Excel: колонки даты <code class="rounded bg-slate-200/60 px-1 py-0.5 text-[11px]">ds</code> и значения <code class="rounded bg-slate-200/60 px-1 py-0.5 text-[11px]">y</code>.
+    </p>
+
+    <section class="mt-6 rounded-xl border border-slate-200/90 bg-white p-4 shadow-sm">
+      <h2 class="text-xs font-semibold uppercase tracking-wide text-slate-500">Этапы алгоритма</h2>
+      <ol class="mt-3 space-y-2.5 text-sm text-slate-700">
+        <li class="flex gap-3 border-l-2 border-emerald-500/70 pl-3">
+          <span class="shrink-0 font-mono text-[11px] text-slate-400">01</span>
+          <span><strong class="text-slate-900">Загрузка.</strong> Excel через Colab; чтение <code class="text-[11px]">ds</code>, <code class="text-[11px]">y</code>.</span>
+        </li>
+        <li class="flex gap-3 border-l-2 border-emerald-500/40 pl-3">
+          <span class="shrink-0 font-mono text-[11px] text-slate-400">02</span>
+          <span><strong class="text-slate-900">Подготовка.</strong> Агрегация по месяцам (<code class="text-[11px]">freq='MS'</code>) — меньше шума, стабильнее ряд: <span class="font-mono text-[12px] text-slate-800">y<sub>month</sub> = Σ<sub>i=1</sub><sup>n</sup> y<sub>i</sub></span>.</span>
+        </li>
+        <li class="flex gap-3 border-l-2 border-emerald-500/40 pl-3">
+          <span class="shrink-0 font-mono text-[11px] text-slate-400">03</span>
+          <span><strong class="text-slate-900">Обучение.</strong> Prophet оценивает тренд, годовую сезонность и повторяемые колебания (<code class="text-[11px]">multiplicative</code>).</span>
+        </li>
+        <li class="flex gap-3 border-l-2 border-emerald-500/40 pl-3">
+          <span class="shrink-0 font-mono text-[11px] text-slate-400">04</span>
+          <span class="leading-snug"><strong class="text-slate-900">Модель.</strong> <span class="font-mono text-[12px] text-slate-800">y(t) = g(t) × s(t) + ε<sub>t</sub></span> — <span class="text-slate-600">g(t)</span> тренд, <span class="text-slate-600">s(t)</span> сезонность, <span class="text-slate-600">ε<sub>t</sub></span> ошибка.</span>
+        </li>
+        <li class="flex gap-3 border-l-2 border-emerald-500/40 pl-3">
+          <span class="shrink-0 font-mono text-[11px] text-slate-400">05</span>
+          <span><strong class="text-slate-900">Прогноз.</strong> <code class="text-[11px]">yhat</code>, нижняя и верхняя границы неопределённости.</span>
+        </li>
+        <li class="flex gap-3 border-l-2 border-emerald-500/30 pl-3">
+          <span class="shrink-0 font-mono text-[11px] text-slate-400">06</span>
+          <span><strong class="text-slate-900">Визуализация и экспорт.</strong> График и выгрузка будущего в Excel для планирования.</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="mt-4 rounded-xl border border-slate-800 bg-slate-900 shadow-sm">
+      <div class="flex items-center justify-between border-b border-slate-700/80 px-3 py-2">
+        <span class="text-[10px] font-medium uppercase tracking-wide text-slate-400">Google Colab · Python</span>
+        <span class="text-[10px] text-slate-500">прокрутка</span>
+      </div>
+      <pre class="max-h-[min(52vh,22rem)] overflow-auto p-3 text-[11px] leading-snug text-slate-100"><code>import pandas as pd
+import matplotlib.pyplot as plt
+from prophet import Prophet
+from google.colab import files
+
+# 1. ЗАГРУЗКА ФАЙЛА
+uploaded = files.upload()
+filename = list(uploaded.keys())[0]
+df = pd.read_excel(filename)
+
+# 2. ПОДГОТОВКА ДАННЫХ
+df["ds"] = pd.to_datetime(df["ds"])
+# Агрегируем данные по месяцам (freq='MS').
+# Это уберет хаос на графике и сделает прогноз точным.
+df = df.groupby(pd.Grouper(key='ds', freq='MS'))['y'].sum().reset_index()
+
+# 3. НАСТРОЙКА МОДЕЛИ
+# seasonality_mode='multiplicative' — критично для твоего типа данных
+model = Prophet(
+    yearly_seasonality=True,
+    weekly_seasonality=False,
+    daily_seasonality=False,
+    seasonality_mode='multiplicative'
+)
+model.fit(df)
+
+# 4. СОЗДАНИЕ ПЕРИОДА ДЛЯ ПРОГНОЗА
+# periods=24 — прогноз на 2 года вперед. Можешь менять.
+future = model.make_future_dataframe(periods=24, freq="MS")
+forecast = model.predict(future)
+
+# 5. ВИЗУАЛИЗАЦИЯ
+fig = model.plot(forecast)
+plt.title("Прогноз спроса")
+plt.axvline(x=df['ds'].max(), color='red', linestyle='--', label='Начало прогноза')  # Линия разделения
+plt.legend()
+plt.show()
+
+# 6. ФОРМИРОВАНИЕ EXCEL (ТОЛЬКО БУДУЩЕЕ)
+# Оставляем только то, что позже последней даты в твоем файле
+history_end_date = df["ds"].max()
+only_future = forecast[forecast["ds"] > history_end_date].copy()
+# Выбираем нужные колонки и убираем время
+result = only_future[["ds", "yhat", "yhat_lower", "yhat_upper"]].copy()
+result["ds"] = result["ds"].dt.date
+# Переименуем для красоты
+result.columns = ['Дата', 'Прогноз', 'Мин_порог', 'Макс_порог']
+
+# 7. СОХРАНЕНИЕ
+result.to_excel("future_forecast.xlsx", index=False)
+files.download("future_forecast.xlsx")</code></pre>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-3">
+      <div><p class="text-lg font-semibold text-emerald-300">PredictSense</p><p class="mt-2 text-sm text-slate-500">Прогнозирование сезонного спроса.</p></div>
+      <div class="text-sm text-slate-600">
+        <p>Работала над проектом: Тугаева Алина и Иксанов Айрат</p>
+        <p>Школа: Школа Цифровых Технологий</p>
+        <p>Курс: 1</p>
+        <p>Университет: Narxoz</p>
+        <p class="mt-2 text-slate-500">© 2026</p>
+      </div>
+      <div>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="block text-sm hover:text-emerald-600">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="block text-sm hover:text-emerald-600">LinkedIn</a>
+      </div>
+    </div>
+    <div class="border-t border-slate-200 px-4 py-4 text-center text-xs text-slate-500">
+      <a href="index.html">Главная</a> · <a href="about.html">О проекте</a> · <a href="datasets.html">Данные</a> · <a href="analysis.html">Анализ</a> · <a href="methodology.html">Методология</a> · <a href="results.html">Результаты</a> · <a href="business.html">Бизнес-кейс</a> · <a href="faq.html">FAQ</a> · <a href="contact.html">Контакты</a>
+    </div>
+  </footer>
+  <button data-back-to-top type="button" class="fixed bottom-5 right-5 rounded-full bg-emerald-500 px-3 py-2 text-xs font-semibold text-slate-900 opacity-0 pointer-events-none shadow-md">Вверх</button>
+  <script src="assets/main.js"></script>
+</body>
+</html>
